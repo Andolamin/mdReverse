@@ -1,4 +1,4 @@
-import {TOKEN_RULE} from "./config";
+import {TOKEN_RULE} from "./config.mjs";
 
 function Markdown() {
 }
@@ -13,7 +13,7 @@ function translate(vdomt) {
     const stack = [];
     let curNode = vdomt, children, result = '';
     vdomt._pos = 0;
-    console.time('markdown text translate');
+    // console.time('markdown text translate');
     while (curNode !== vdomt || curNode.children.length > curNode._pos) {
         if (curNode.position === 1) {                                   // 非空元素
             children = curNode.children;
@@ -37,7 +37,7 @@ function translate(vdomt) {
             curNode = stack[stack.length - 1];                          // 设置下一次循环的节点
         }
     }
-    console.timeEnd('markdown text translate');
+    // console.timeEnd('markdown text translate');
 
     return result;
 }

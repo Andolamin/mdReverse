@@ -1,4 +1,4 @@
-import {Tools} from "../tools/tools";
+import {Tools} from "../tools/tools.mjs";
 
 /**
  * @description [Strikethrough扩展语法]{@link https://www.markdownguide.org/extended-syntax/#strikethrough}

@@ -1,5 +1,5 @@
-import {EL_TYPE, REGEXP, TOKEN_RULE} from "./config";
-import {Tools} from './tools/tools';
+import {EL_TYPE, REGEXP, TOKEN_RULE} from "./config.mjs";
+import {Tools} from './tools/tools.mjs';
 
 function Parser() {
 
@@ -14,7 +14,7 @@ Object.defineProperties(Parser.prototype, {
 function analysis(tokenArr) {
     if (!Tools.typeIs(tokenArr, Tools.TYPE.Array)) return;
 
-    console.time('syntactic analysis');
+    // console.time('syntactic analysis');
     const result = [];
     let tag, type, attr, pos, content, token, separator, obj;
     for (let i = tokenArr.length; i--;) {
@@ -37,7 +37,7 @@ function analysis(tokenArr) {
 
         result.push(obj);
     }
-    console.timeEnd('syntactic analysis');
+    // console.timeEnd('syntactic analysis');
     return result;
 }
 

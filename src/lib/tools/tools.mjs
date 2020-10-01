@@ -1,4 +1,4 @@
-import {REGEXP, LineSeparator} from "../config";
+import {REGEXP, LineSeparator} from "../config.mjs";
 
 const TYPE = {
     Array: '[object Array]',

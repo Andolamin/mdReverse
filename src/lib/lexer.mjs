@@ -1,4 +1,4 @@
-import {Tools} from "./tools/tools";
+import {Tools} from "./tools/tools.mjs";
 
 function Lexer() {
 }
@@ -16,7 +16,7 @@ Object.defineProperties(Lexer.prototype, {
  */
 function analysis(str) {
     str = Tools.trim(str);
-    console.time('lexical analysis');
+    // console.time('lexical analysis');
     const result = [];
     let stack = [], char, start = 0, end = 0;
     for (let i = 0, len = str.length, depth; i < len; i++) {
@@ -47,7 +47,7 @@ function analysis(str) {
         }
     }
 
-    console.timeEnd('lexical analysis');
+    // console.timeEnd('lexical analysis');
     return result;
 }
 

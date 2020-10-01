@@ -3,6 +3,7 @@
   "version": "0.0.7",
   "description": "written by JavaScript. Convert HTML to Markdown.",
   "main": "src/index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --env.demo",

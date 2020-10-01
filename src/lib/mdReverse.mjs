@@ -1,11 +1,11 @@
-import {EL_TYPE, DEFAULT_RULE, addToken} from "./config";
-import {TablePlugin} from "./plugins/table";
-import {StrikethroughPlugin} from "./plugins/strikethrough";
-import {Lexer} from "./lexer";
-import {Parser} from "./parser";
-import {VDOMTree} from "./vdomt";
-import {Markdown} from "./markdown";
-import {Tools} from "./tools/tools";
+import {EL_TYPE, DEFAULT_RULE, addToken} from "./config.mjs";
+import {TablePlugin} from "./plugins/table.mjs";
+import {StrikethroughPlugin} from "./plugins/strikethrough.mjs";
+import {Lexer} from "./lexer.mjs";
+import {Parser} from "./parser.mjs";
+import {VDOMTree} from "./vdomt.mjs";
+import {Markdown} from "./markdown.mjs";
+import {Tools} from "./tools/tools.mjs";
 
 function MdReverse() {
     this.HTML = '';

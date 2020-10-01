@@ -1,4 +1,4 @@
-import {EL_TYPE, GLOBAL_CONFIG, TOKEN_RULE} from "./config";
+import {EL_TYPE, GLOBAL_CONFIG, TOKEN_RULE} from "./config.mjs";
 
 function VDOMTree() {
 
@@ -17,7 +17,7 @@ function build(tokenArr) {
     const rootNode = {tag: 'root', type: EL_TYPE['rootNode'], position: 1}, stack = [rootNode];
     let parNode = rootNode, curNode, children, childrenLen, filterChild = [EL_TYPE['all_element']];
 
-    console.time('virtual dom tree build');
+    // console.time('virtual dom tree build');
     while ((curNode = tokenArr.pop())) {
         // 构建DOM树
         if (curNode.position === 1) {                                                                       // 开标签
@@ -71,7 +71,7 @@ function build(tokenArr) {
         }
 
     }
-    console.timeEnd('virtual dom tree build');
+    // console.timeEnd('virtual dom tree build');
     return rootNode;
 }
 
